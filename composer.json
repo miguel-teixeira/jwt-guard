@@ -1,0 +1,32 @@
+{
+    "name": "miguel-teixeira/jwt-guard",
+    "description": "JW.",
+    "keywords": ["auth", "jwt"],
+    "homepage": "https://github.com/miguel-teixeira",
+    "authors": [
+        {
+            "name": "Miguel Teixeira",
+            "email": "marauder.fx@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.5",
+        "lcobucci/jwt": "^3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.5"
+    },
+    "autoload": {
+       "psr-4": {
+            "JwtGuard\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JwtGuard\\Tests\\": "tests/"
+        }
+    },
+    "license": "MIT"
+    
+}
