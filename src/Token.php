@@ -123,7 +123,7 @@ abstract class Token
         return $this->decode($request->bearerToken());
     }
 
-    protected function buildEmptyToken(): Token
+    public function buildEmptyToken(): Token
     {
         $this->builder = $this->getBuilder();
 
