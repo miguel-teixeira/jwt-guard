@@ -117,13 +117,13 @@ abstract class Token
     {
         if (is_null(request()->bearerToken())) {
 
-            return $this->buildEmptyToken();
+            return $this->emptyToken();
         }
 
         return $this->decode($request->bearerToken());
     }
 
-    public function buildEmptyToken(): Token
+    public function emptyToken(): Token
     {
         $this->builder = $this->getBuilder();
 
