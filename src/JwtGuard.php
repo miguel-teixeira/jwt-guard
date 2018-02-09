@@ -24,7 +24,7 @@ class JwtGuard implements Guard
         $this->request = $request;
     }
 
-    public function user(): ?Authenticatable
+    public function user()
     {
         if (! is_null($this->user)) {
             return $this->user;
@@ -73,6 +73,8 @@ class JwtGuard implements Guard
     public function logout(): void
     {
         $this->user = null;
+
+        $this->token->emptyToken();
     }
 
     protected function hasValidCredentials(Authenticatable $user, array $credentials): bool
