@@ -51,7 +51,7 @@ class JwtGuard implements Guard
     {
         $user = $this->provider->retrieveByCredentials($credentials);
 
-        if ($this->hasValidCredentials($user, $credentials)) {
+        if (! is_null($user) && $this->hasValidCredentials($user, $credentials)) {
             $this->login($user);
 
             return true;
